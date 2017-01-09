@@ -2,7 +2,7 @@ FROM autodomotalus/base:latest
 
 MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodomotalus>
 
-# Install Java 8 
+# Install Java 8  
 RUN \
   add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \

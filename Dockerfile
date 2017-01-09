@@ -6,7 +6,7 @@ MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodom
 RUN apt-get update -y
 RUN apt-get install -y python-software-properties software-properties-common libfreetype6 libfontconfig build-essential
 RUN apt-get upgrade -y
-RUN apt-get install -y apparmor
+
 
 #Java 8
 RUN \

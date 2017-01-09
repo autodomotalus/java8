@@ -1,6 +1,6 @@
 FROM autodomotalus/base:latest
 
-MAINTAINER 
+MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodomotalus>
 
 # Install Java 8 
 RUN \

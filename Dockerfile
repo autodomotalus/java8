@@ -4,8 +4,8 @@ MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodom
 
 # Install Java 8  
 RUN \
-  add-apt-repository ppa:webupd8team/java && \
+  add-apt-repository ppa:webupd8team/java -y && \
   apt-get update && \
-  apt-get install oracle-java8-installer
+  apt-get install oracle-java8-installer -y 
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle

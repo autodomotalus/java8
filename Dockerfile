@@ -1,6 +1,6 @@
 FROM autodomotalus/base:latest
 
-MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodomotalus>
+MAINTAINER Autodomotalus <https://github.com/autodomotalus>
 
 USER root 
 
@@ -12,7 +12,7 @@ RUN apt-get upgrade -y
 
 #Java 8
 RUN \
-  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  #echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \
   apt-get install -y oracle-java8-installer && \

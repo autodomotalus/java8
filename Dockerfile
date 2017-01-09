@@ -2,6 +2,8 @@ FROM autodomotalus/base:latest
 
 MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodomotalus>
 
+USER root 
+
 #Base
 RUN apt-get update -y
 RUN apt-get install -y python-software-properties software-properties-common libfreetype6 libfontconfig build-essential

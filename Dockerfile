@@ -2,14 +2,19 @@ FROM autodomotalus/base:latest
 
 MAINTAINER Arnault Droz-dit-Busset for Autodomotalus <https://github.com/autodomotalus>
 
-# Base
-RUN apt-get install -y python-software-properties software-properties-common build-essential
+#Base
+RUN apt-get update
+RUN apt-get install -y python-software-properties software-properties-common libfreetype6 libfontconfig build-essential
 RUN apt-get upgrade -y
+RUN apt-get install -y apparmor
 
-# Install Java 8  
+#Java 8
 RUN \
-  add-apt-repository ppa:webupd8team/java -y && \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \
-  apt-get install oracle-java8-installer -y 
+  apt-get install -y oracle-java8-installer && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/cache/oracle-jdk8-installer
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
